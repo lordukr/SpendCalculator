@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		1F99C68F1D4A41D6002F112A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F99C68E1D4A41D6002F112A /* main.m */; };
 		1F99C6921D4A41D6002F112A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F99C6911D4A41D6002F112A /* AppDelegate.m */; };
-		1F99C6951D4A41D6002F112A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F99C6941D4A41D6002F112A /* ViewController.m */; };
 		1F99C6981D4A41D6002F112A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F99C6961D4A41D6002F112A /* Main.storyboard */; };
 		1F99C69B1D4A41D6002F112A /* SpendCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F99C6991D4A41D6002F112A /* SpendCalculator.xcdatamodeld */; };
 		1F99C69D1D4A41D6002F112A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F99C69C1D4A41D6002F112A /* Assets.xcassets */; };
 		1F99C6A01D4A41D6002F112A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F99C69E1D4A41D6002F112A /* LaunchScreen.storyboard */; };
+		1F99C6AA1D4A42DF002F112A /* AZDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F99C6A91D4A42DF002F112A /* AZDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +21,13 @@
 		1F99C68E1D4A41D6002F112A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1F99C6901D4A41D6002F112A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F99C6911D4A41D6002F112A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1F99C6931D4A41D6002F112A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F99C6941D4A41D6002F112A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F99C6971D4A41D6002F112A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F99C69A1D4A41D6002F112A /* SpendCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpendCalculator.xcdatamodel; sourceTree = "<group>"; };
 		1F99C69C1D4A41D6002F112A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F99C69F1D4A41D6002F112A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F99C6A11D4A41D6002F112A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F99C6A81D4A42DF002F112A /* AZDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AZDataManager.h; sourceTree = "<group>"; };
+		1F99C6A91D4A42DF002F112A /* AZDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AZDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +60,9 @@
 		1F99C68C1D4A41D6002F112A /* SpendCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				1F99C6A71D4A42A2002F112A /* CoreData */,
 				1F99C6901D4A41D6002F112A /* AppDelegate.h */,
 				1F99C6911D4A41D6002F112A /* AppDelegate.m */,
-				1F99C6931D4A41D6002F112A /* ViewController.h */,
-				1F99C6941D4A41D6002F112A /* ViewController.m */,
 				1F99C6961D4A41D6002F112A /* Main.storyboard */,
 				1F99C69C1D4A41D6002F112A /* Assets.xcassets */,
 				1F99C69E1D4A41D6002F112A /* LaunchScreen.storyboard */,
@@ -80,6 +79,16 @@
 				1F99C68E1D4A41D6002F112A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F99C6A71D4A42A2002F112A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1F99C6A81D4A42DF002F112A /* AZDataManager.h */,
+				1F99C6A91D4A42DF002F112A /* AZDataManager.m */,
+			);
+			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F99C69B1D4A41D6002F112A /* SpendCalculator.xcdatamodeld in Sources */,
-				1F99C6951D4A41D6002F112A /* ViewController.m in Sources */,
+				1F99C6AA1D4A42DF002F112A /* AZDataManager.m in Sources */,
 				1F99C6921D4A41D6002F112A /* AppDelegate.m in Sources */,
 				1F99C68F1D4A41D6002F112A /* main.m in Sources */,
 			);
